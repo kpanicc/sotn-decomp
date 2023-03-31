@@ -112,7 +112,11 @@ INCLUDE_ASM("asm/us/st/rwrp/nonmatchings/8DF0", func_8018D8F0);
 
 INCLUDE_ASM("asm/us/st/rwrp/nonmatchings/8DF0", func_8018D934);
 
-INCLUDE_ASM("asm/us/st/rwrp/nonmatchings/8DF0", func_8018D964);
+void func_8018D964(void) {
+    if (g_CurrentEntity->accelerationY <= 0x5FFFF) {
+        g_CurrentEntity->accelerationY += 0x4000;
+    }
+}
 
 INCLUDE_ASM("asm/us/st/rwrp/nonmatchings/8DF0", func_8018D990);
 
